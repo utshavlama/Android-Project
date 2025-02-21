@@ -12,7 +12,7 @@
         android:scaleType="centerCrop"
         android:src="@drawable/yu"
         />
-
+    <!-- App Logo -->
     <!-- App Logo -->
     <ImageView
         android:id="@+id/logo"

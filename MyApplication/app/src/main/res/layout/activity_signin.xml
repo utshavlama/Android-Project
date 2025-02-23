@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
+
     <!-- Background Image -->
     <ImageView
         android:id="@+id/backgroundImage"
@@ -91,6 +93,26 @@
         android:layout_marginHorizontal="24dp"
         android:layout_marginBottom="24dp"/>
 
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtconformPassword">
+
+        <RadioButton
+            android:text="Male"
+            android:layout_height="20dp"
+            android:layout_width="wrap_content"/>
+        <RadioButton
+            android:text="Female"
+            android:layout_height="20dp"
+            android:layout_width="wrap_content"/>
+    </RadioGroup>
+
+
     <!-- Login Button -->
     <Button
         android:id="@+id/btnLogin"
@@ -101,36 +123,25 @@
         android:backgroundTint="@android:color/white"
         android:textSize="16sp"
         android:paddingVertical="12dp"
-        app:layout_constraintTop_toBottomOf="@id/edtconformPassword"
+        app:layout_constraintTop_toBottomOf="@id/rgGender"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="24dp"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Forgot Password TextView -->
-    <TextView
-        android:id="@+id/forgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot Password?"
-        android:textColor="@android:color/black"
-        android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@id/btnLogin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="16dp"/>
+
 
     <!-- Don't Have an Account? Sign Up Button -->
     <Button
         android:id="@+id/btnSignUp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Don't have an account? Sign Up"
+        android:text="already have an account? login"
         android:textColor="@android:color/black"
         android:backgroundTint="@android:color/white"
         android:textSize="14sp"
         android:paddingVertical="12dp"
-        app:layout_constraintTop_toBottomOf="@id/forgotPassword"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="24dp"/>

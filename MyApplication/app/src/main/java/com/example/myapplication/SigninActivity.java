@@ -1,9 +1,12 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -15,8 +18,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class SigninActivity extends AppCompatActivity {
 
+    private TextView LoginActivity;
+
     private EditText edtEmail, edtPassword, edtButton;
-    private AppCompatButton btnSubmit;
+    private AppCompatButton btnSubmit, login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +43,15 @@ public class SigninActivity extends AppCompatActivity {
                 }
             }
         });
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent utshav = new Intent(SigninActivity.this, LoginActivity.class);
+                startActivity(utshav);
+                finish();
+            }
+        });
     }
 
     @SuppressLint("WrongViewCast")
@@ -45,6 +59,7 @@ public class SigninActivity extends AppCompatActivity {
         edtEmail = findViewById(R.id.edtEmail);
         edtPassword = findViewById(R.id.edtPassword);
         btnSubmit = findViewById(R.id.btnLogin);
+        login = findViewById(R.id.btnSignUp);
 
     }
 

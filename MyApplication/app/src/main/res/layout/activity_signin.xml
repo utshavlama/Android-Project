@@ -14,7 +14,9 @@
         android:scaleType="centerCrop"
         android:src="@drawable/yu"
         />
-    <!-- App Logo -->
+
+    <include layout="@layout/layout_toolbar"/>
+
     <!-- App Logo -->
     <ImageView
         android:id="@+id/logo"

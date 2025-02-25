@@ -11,10 +11,10 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="24dp"
         android:background="#808080"
         tools:context=".Dashboard">
 
+        <include layout="@layout/layout_toolbar"/>
         <!-- Dashboard Title -->
         <TextView
             android:id="@+id/dashboard"

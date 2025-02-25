@@ -12,7 +12,7 @@
         android:src="@drawable/gojo1"
         />
 
-    <include layout="@layout/layout_toolbar"/>
+
 
     <!-- Login Title -->
     <TextView

@@ -13,6 +13,7 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="windowNoTitle">true</item>
+        <item name="android:fitsSystemWindows">true</item>
         <item name="windowActionBarOverlay">@null</item>
         <item name="windowActionBar">false</item>
     </style>

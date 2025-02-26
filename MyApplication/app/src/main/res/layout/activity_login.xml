@@ -12,9 +12,8 @@
         android:src="@drawable/gojo1"
         />
 
-
-
     <!-- Login Title -->
+    <!-- hello my name is utshav lama -->
     <TextView
         android:id="@+id/titleLogin"
         android:layout_width="wrap_content"

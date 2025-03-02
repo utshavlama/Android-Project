@@ -9,11 +9,9 @@
         android:id="@+id/backgroundImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/gojo1"
-        />
+        android:src="@drawable/gojo1"/>
 
     <!-- Login Title -->
-    <!-- hello my name is utshav lama -->
     <TextView
         android:id="@+id/titleLogin"
         android:layout_width="wrap_content"

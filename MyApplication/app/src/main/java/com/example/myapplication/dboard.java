@@ -1,16 +1,13 @@
 package com.example.myapplication;
 import android.os.Bundle;
-import androidx.activity.EdgeToEdge;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 public class dboard extends AppCompatActivity {
     private Toolbar toolbar;
-    private TabLayout tab;
+    private TabLayout tabLayout;
     private ViewPager viewPager;
     private ViewPagerAdapter adapter;
     @Override
@@ -18,26 +15,26 @@ public class dboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
         findviews();
-        ftoolbar();
+        inittoolbar();
     }
     private int[] iconList ={R.drawable.a,R.drawable.b,R.drawable.c};
     private void setupWithViewPager(){
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new homeFragment(),"Home");
-        adapter.addFragment(new ProfileFrahment(),"Profile");
+        adapter.addFragment(new ProfileFragment(),"Profile");
         adapter.addFragment(new SettingFragment(),"Settings");
         viewPager.setAdapter(adapter);
-        tab.setupWithViewPager(viewPager);
+        tabLayout.setupWithViewPager(viewPager);
     }
     private void findviews(){
-        tab= findViewById(R.id.tablayout);
+        tabLayout= findViewById(R.id.tablayout);
         viewPager = findViewById(R.id.viewpager);
         setupWithViewPager();
-        tab.getTabAt(0).setIcon(iconList[0]);
-        tab.getTabAt(1).setIcon(iconList[1]);
-        tab.getTabAt(2).setIcon(iconList[2]);
+        tabLayout.getTabAt(0).setIcon(iconList[0]);
+        tabLayout.getTabAt(1).setIcon(iconList[1]);
+        tabLayout.getTabAt(2).setIcon(iconList[2]);
     }
-    private void ftoolbar(){
+    private void inittoolbar(){
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Dashboard");

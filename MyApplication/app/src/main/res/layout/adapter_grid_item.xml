@@ -1,44 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <ImageView
-        android:id="@+id/imageproduct"
+        android:id="@+id/imagegridproduct"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:scaleType="centerCrop"
         android:background="@drawable/a"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         />
     <TextView
-        android:id="@+id/txtproductname"
+        android:id="@+id/txtgridproductname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:text="productname"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageproduct"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagegridproduct"
         />
     <TextView
-        android:id="@+id/txtproductdiscription"
+        android:id="@+id/txtgridproductdiscription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:text="productDiscription"
-        app:layout_constraintTop_toBottomOf="@+id/txtproductname"
-        app:layout_constraintStart_toEndOf="@+id/imageproduct"
+        app:layout_constraintTop_toBottomOf="@+id/txtgridproductname"
+        app:layout_constraintStart_toStartOf="@+id/imagegridproduct"
         />
     <TextView
-        android:id="@+id/txtproductprice"
+        android:id="@+id/txtgridproductprice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:text="ProductPrice"
-        app:layout_constraintTop_toBottomOf="@+id/txtproductdiscription"
-        app:layout_constraintStart_toEndOf="@+id/imageproduct"
+        app:layout_constraintTop_toBottomOf="@+id/txtgridproductdiscription"
+        app:layout_constraintStart_toStartOf="@+id/imagegridproduct"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

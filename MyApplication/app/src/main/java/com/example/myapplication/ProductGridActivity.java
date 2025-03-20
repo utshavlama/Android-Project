@@ -1,6 +1,9 @@
 package com.example.myapplication;
+
 import android.os.Bundle;
-import android.widget.ListView;
+import android.widget.GridView;
+import android.widget.GridView;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,26 +13,27 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 
-public class ListViewActivity extends AppCompatActivity {
+public class ProductGridActivity extends AppCompatActivity {
+
     private Toolbar toolbar;
-    private ListView listView;
-    private ProductListAdapter adapter;
+    private GridView gridview;
+    private ProductGridAdapter adapter;
     private ArrayList<Product> productlist = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_view);
+        setContentView(R.layout.activity_product_grid);
         ftoolbar();
         findview();
-        adapter = new ProductListAdapter(productlist ,ListViewActivity.this);
-        listView.setAdapter(adapter);
+        adapter = new ProductGridAdapter(productlist ,ProductGridActivity.this);
+        gridview.setAdapter(adapter);
     }
     private void findview(){
-        listView = findViewById(R.id.main);
+        gridview = findViewById(R.id.gridView);
         setproductdata();
     }
     private void ftoolbar(){
-        toolbar = findViewById(R.id.toolbar1);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Product list toolbar");
         getSupportActionBar().setDisplayShowTitleEnabled(true);
@@ -62,5 +66,4 @@ public class ListViewActivity extends AppCompatActivity {
         productlist.add(p4);
 
     }
-
 }

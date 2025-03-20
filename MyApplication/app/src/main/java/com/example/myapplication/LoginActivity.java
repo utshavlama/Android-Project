@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent utshav = new Intent(LoginActivity.this, Dashboard.class);
+                Intent utshav = new Intent(LoginActivity.this, ProductGridActivity.class);
                 startActivity(utshav);
                 finish();
             }

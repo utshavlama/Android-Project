@@ -22,7 +22,7 @@ public class Product {
         this.description = description;
     }
 
-    public CharSequence getPrice() {
+    public double getPrice() {
         return price;
     }
 
